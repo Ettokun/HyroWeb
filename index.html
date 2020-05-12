@@ -336,12 +336,6 @@
 }
 
 .jazyk{
-	
-  	    letter-spacing: 3px;
-  	    margin-bottom: 30px;
-  	    position: initial;
-  	    cursor: auto;	
-	
 	margin: 0;
 	padding 0;
 	text-aling: center;
@@ -351,6 +345,7 @@
 	text-transform: uppercase;
 	background-image: linear-gradient(to right, #f00,#ff0,#0ff,#0f0,#00f);
 	-webkit-background-clip: text;
+	animation: animace2 3.2s;
 	animation: jazykanimation 20s linear infinite;
 	background-size: 1000%;
 }
@@ -370,6 +365,16 @@
 		background-position: 0% 100%;
 	}	
 }
+
+@keyframes animace2ee {
+  0%{
+    opacity: 0
+  }
+  80%{
+    top: 12%;
+    opacity: 0;
+  }
+}	    
 	    
     </style>
 </head>
