@@ -279,6 +279,34 @@
   		color: #fff;
 	}
 
+.jazyk{
+	color: transparent;
+	font-size: 30px;
+	font-weight 500;
+	text-transform: uppercase;
+	background-image: linear-gradient(to right, #f00,#ff0,#0ff,#0f0,#00f);
+	-webkit-background-clip: text;
+	animation: animace2 3.1s
+	animation: jazykanimation 20s linear infinite;
+	background-size: 1000%;
+}
+	    
+@keyframes jazykanimation   
+{	 	
+	0%
+	{
+		background-position: 0% 100%;
+	}
+	50%
+	{
+		background-position: 100% 0%;
+	}
+	100%
+	{
+		background-position: 0% 100%;
+	}	
+}	    	    
+	    
 @keyframes tl1{
   0%{
     opacity: 0;
@@ -335,32 +363,6 @@
   }
 }
 
-.jazyk{
-	color: transparent;
-	font-size: 30px;
-	font-weight 500;
-	text-transform: uppercase;
-	background-image: linear-gradient(to right, #f00,#ff0,#0ff,#0f0,#00f);
-	-webkit-background-clip: text;
-	animation: jazykanimation 20s linear infinite;
-	background-size: 1000%;
-}
-	    
-@keyframes jazykanimation   
-{	 	
-	0%
-	{
-		background-position: 0% 100%;
-	}
-	50%
-	{
-		background-position: 100% 0%;
-	}
-	100%
-	{
-		background-position: 0% 100%;
-	}	
-}	    
 	    
     </style>
 </head>
