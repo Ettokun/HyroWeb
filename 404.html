@@ -437,6 +437,7 @@ document.onmousedown = rtclickcheck;*/
         }
 
         body {
+  	    left: 45%;
             text-align: center;
         }
 
@@ -461,7 +462,9 @@ document.onmousedown = rtclickcheck;*/
         }
 
         .blinking-cursor {
-            /* Thanks to https://codepen.io/ArtemGordinsky/pen/GnLBq */
+  	    top: 40%;
+  	    left: 45%;
+	    text-aling: center;
             font-family: 'Roboto Mono', monospace;
             font-size: 100px;
 	    margin-bottom: 30px;
@@ -540,18 +543,17 @@ document.onmousedown = rtclickcheck;*/
 
     <div class="site-wrapper-inner">
 
-	 <div class="cover-container">    
-            <main role="main" class="inner cover">
-                <p class="lead">
-			
-		        <h1 id="four" style="visibility: visible;">404<span class="blinking-cursor">_</span></h1>
+	 <div class="cover-container"> 
 
-            <script>
+            <header class="masthead clearfix">
+                <div class="inner">
+
+<script>
                 setTimeout(function () {
                     document.getElementById("four").style.visibility = "visible"; 
                     setTimeout(function () {
                         document.getElementById("four").innerHTML =
-                            '404<span class="blinking-cursor">_</span>';
+                            '40<span class="blinking-cursor">_</span>';
                         setTimeout(function () {
                             document.getElementById("four").innerHTML =
                                 '404<span class="blinking-cursor">_</span>';
@@ -559,10 +561,14 @@ document.onmousedown = rtclickcheck;*/
                     }, 700);
                 }, 700);
             </script>
-            <noscript>
-                <h1>404<span class="blinking-cursor">_</span></h1><br><br><br>
-            </noscript>	
-			
+
+<span class="nadpis">404</span><span class="blinking-cursor">_</span><br>
+		    <span class="jazyk">Page not found...</span>
+                </div>
+            </header>
+   
+            <main role="main" class="inner cover">
+                <p class="lead">
                     <a href="/index.html" class="tlacitko">Go Back</a>
                 </p>
             </main>
