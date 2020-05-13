@@ -1,0 +1,44 @@
+ErrorDocument 400 /400.php
+ErrorDocument 401 /401.php
+ErrorDocument 414 /414.php
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+ErrorDocument 505 /505.php
+
+
+# TEMP MAINTENANCE PAGE
+<IfModule mod_rewrite.c>
+	RewriteEngine Off
+
+	# local ip
+	RewriteCond %{REMOTE_ADDR} !^123.456.678
+
+	# server ip
+	RewriteCond %{REMOTE_ADDR} !^111.222.333
+
+	# w3c validation
+	# RewriteCond %{REMOTE_ADDR} !^128.30.52.
+
+	# maintenance page and assets
+	RewriteCond %{REQUEST_URI} !/maintenance [NC]
+	RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+
+	# serve default 503 response
+	RewriteRule .* http://hyrousek.tk/projekty.html [R=503,L]
+	
+	# alternate response without custom page
+	# RewriteRule .* - [R=503,L]
+</IfModule>
+
+# serve custom 503 response
+ErrorDocument 503 /projekty.html
+
+# alternate response without custom page
+# ErrorDocument 503 "Coming soon!"
+
+<IfModule mod_headers.c>
+	# 3600 = 60 minutes
+	# 86400 = 1 day
+	# 604800 = 1 week
+	Header always set Retry-After "86400"
+</IfModule>
