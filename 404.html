@@ -464,7 +464,7 @@ document.onmousedown = rtclickcheck;*/
             /* Thanks to https://codepen.io/ArtemGordinsky/pen/GnLBq */
             font-family: 'Roboto Mono', monospace;
             font-size: 100px;
-            color: rgba(255, 255, 255, .75);
+            color: rgba(255, 255, 255, .75);	
             -webkit-animation: 1s blink step-end infinite;
             -moz-animation: 1s blink step-end infinite;
             -ms-animation: 1s blink step-end infinite;
@@ -543,17 +543,17 @@ document.onmousedown = rtclickcheck;*/
             <main role="main" class="inner cover">
                 <p class="lead">
 			
-		        <h1 id="four" style="visibility: visible;">404<span class="blinking-cursor">_</span></h1>
+		        <h1 id="four" class="titulek" style="visibility: visible;">404<span class="blinking-cursor titulek">_</span></h1>
 
             <script>
                 setTimeout(function () {
                     document.getElementById("four").style.visibility = "visible"; 
                     setTimeout(function () {
                         document.getElementById("four").innerHTML =
-                            '404<span class="blinking-cursor">_</span>';
+                            '404<span class="blinking-cursor titulek">_</span>';
                         setTimeout(function () {
                             document.getElementById("four").innerHTML =
-                                '404<span class="blinking-cursor">_</span>';
+                                '404<span class="blinking-cursor titulek">_</span>';
                         }, 700);
                     }, 700);
                 }, 700);
