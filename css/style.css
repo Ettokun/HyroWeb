@@ -396,18 +396,7 @@
     top: 12%;
     opacity: 0;
   }
-}
-
-@keyframes animace3 {
-  0%{
-    opacity: 0
-  }
-  80%{
-    top: -12%;
-    opacity: 0;
-  }
-}
-	    
+}	    
 
 ul {
 
@@ -424,7 +413,17 @@ ul {
   padding:0;
 
   display:flex;
-  animation: animace3 4.2s;
+  animation: animace3 3.2s;
+}
+
+@keyframes animace3 {
+  0%{
+    opacity: 0
+  }
+  80%{
+    top: -12%;
+    opacity: 0;
+  }
 }
 
 ul li {
