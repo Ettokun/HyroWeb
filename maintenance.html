@@ -198,7 +198,65 @@ document.onmousedown = rtclickcheck;*/
    
             <main role="main" class="inner cover">
                 <p class="lead">
-                    <a href="/index.html" class="tlacitko3">Go Back</a>
+			
+<style>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@font-face {
+    font-family: 'YTSans';
+    src: url("bold.otf") format("opentype");
+}
+
+  .fullscreenDiv {
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+}
+.center {
+    position: relative;
+    top: 40%;
+    margin-top: -25px;
+    margin-left: -50px;
+}
+.title {
+  font-family: "YTSans";
+  color: #fff;
+  font-size: 65px;
+}
+.text {
+  font-family: 'PT Sans', sans-serif;
+  color: #fff;
+  font-size: 25px;
+}
+.countdown {
+  opacity: .7;
+}
+</style>			
+			
+<script>
+var x = setInterval(updatetimer, 1000);
+function updatetimer() {
+    var countDownDate = new Date("May 30, 2020 12:00:00").getTime();
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("demo").innerHTML = days + "<small class='countdown'>d </small>" + hours + "<small class='countdown'>h </small>"
+    + minutes + "<small class='countdown'>m </small>" + seconds + "<small class='countdown'>s </small>";
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "<span class='countdown'>UPDATING...</span>";
+    }
+}
+updatetimer();
+</script>
                 </p>
             </main>
 
