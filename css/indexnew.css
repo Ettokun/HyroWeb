@@ -59,6 +59,61 @@ html,body {
       color: #a5a5a5;
 }
 
+
+/* ANIMATION */
+.animated-text{
+  color: #fcdb03;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  position: initial;
+  transition: 0.5s;
+  animation: animace2 3.2s;
+  cursor: auto;
+  height: 60px;
+  overflow: hidden;
+}
+
+.animated-text:hover{
+	color: #fc9403;
+}
+
+.line{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.line:first-child{
+  animation: anim 12s infinite;
+}
+
+@keyframes anim {
+  0%{
+    margin-top: 0;
+  }
+  16%{
+    margin-top: -60px;
+  }
+  33%{
+    margin-top: -120px;
+  }
+  50%{
+    margin-top: -180px;
+  }
+  66%{
+    margin-top: -120px;
+  }
+  82%{
+    margin-top: -60px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
+
 .titulek{
   color: #fcdb03;
   font-size: 35px;
