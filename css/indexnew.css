@@ -59,6 +59,25 @@ html,body {
       color: #a5a5a5;
 }
 
+.tlacitko{
+    position: center;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 5px;
+    display: block;
+    border: 3px solid #fcdb03;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.7s;
+    animation: tl1 3.8s;
+}
+
+.tlacitko:hover{
+    border: 3px solid #fce703;
+    background-color: #fce703;
+    color: #fff;
+}
 
 /* ANIMATION */
 .animated-text{
