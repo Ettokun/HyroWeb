@@ -61,6 +61,7 @@ html,body {
 
 .tlacitko{
     position: center;
+    background-color: #171717;
     color: white;
     padding: 15px 32px;
     border-radius: 5px;
