@@ -68,6 +68,7 @@ html,body {
     display: block;
     border: 3px solid #fcdb03;
     font-size: 17px;
+    outline: none;
     cursor: pointer;
     text-decoration: none;
     transition: 0.7s;
