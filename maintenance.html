@@ -94,15 +94,15 @@
   margin-bottom: 6px;
 }
 </style>
-	  
+
     <div class="landing-page">
       <div class="page-content">
         <h1>ERROR</h1>
         <p>
           Web is currently under minetenance.
-		 
 
         </p>
+        <p id="demo"></p>
         <a href="#">Home</a>
       </div>
     </div>
@@ -110,6 +110,30 @@
   <center><div class="text">
     <div>© Copyright | Hyro</div>
   </div></center>
+
+
+  <script>
+  var x = setInterval(updatetimer, 1000);
+  function updatetimer() {
+      var countDownDate = new Date("June 4, 2020 14:00:00").getTime();
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("demo").innerHTML = days + "<small class='countdown'>d </small>" + hours + "<small class='countdown'>h </small>"
+      + minutes + "<small class='countdown'>m </small>" + seconds + "<small class='countdown'>s </small>";
+
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "<span class='countdown'>UPDATING...</span>";
+      }
+  }
+  updatetimer();
+  </script>
 
   </body>
 </html>
